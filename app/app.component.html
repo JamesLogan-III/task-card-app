@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="board-header">Angular 2 Task Board</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form action="" class="form-inline">
+                <div class="formgroup">
+                    <label for="content-field" class="sr-only"></label>
+                    <input type="text" class="form-control" placeholder="Enter a Task ..." [(ngModel)]="currentTask.content" name="content" />
+                </div>
+                <button class="btn btn-primary" type="submit"><i class="fa fa-plus"></i>Add a Task</button> Content: {{ currentTask.content }}
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <app-card *ngFor="let task of tasks" [task]="task"></app-card>
+        <div>
+        </div>
